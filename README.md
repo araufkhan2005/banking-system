@@ -1,448 +1,394 @@
-# 🔵 Vehicle Registry — C++ OOP Vehicle Management System
+# 🔵 Banking System — C++ OOP Banking Management Project
 
 > **Shaping "Skills" for "Scaling" Higher...!!!**
 
 ## 📌 Project Description
 
-This project is a **Vehicle Registry and Management System** developed using **C++ Object-Oriented Programming (OOP)** concepts.
+This project is a **Banking System developed in C++** using **Object-Oriented Programming (OOP)** concepts.
 
-The objective of this project is to understand and demonstrate how different OOP concepts such as **classes, objects, inheritance, multiple inheritance, constructors, destructors, encapsulation, static data members, and arrays of objects** can be used to develop a real-world vehicle management application.
+The objective of this project is to understand and demonstrate how classes, objects, inheritance, virtual functions, function overriding, pointers, and dynamic memory allocation can be used to build a menu-driven banking application.
 
-The system supports different types of vehicles including **Car, Electric Car, Aircraft, Flying Car, Sports Car, Sedan, and SUV**.
+The project contains **3 different account types**:
 
-Users can add different vehicles, display all registered vehicles, and search for a particular vehicle using its ID.
+* Savings Account
+* Checking Account
+* Fixed Deposit Account
+
+The system also provides operations such as **Deposit, Withdraw, Display Account Information, Calculate Interest, and Check Overdraft**.
 
 ---
 
 ## 🎯 Objectives
 
-- Understand the fundamentals of Object-Oriented Programming in C++.
-- Learn how to create classes and objects.
-- Understand inheritance between different classes.
-- Practice multilevel and multiple inheritance.
-- Learn how constructors and destructors work.
-- Understand getters and setters for data encapsulation.
-- Store multiple objects using arrays.
-- Develop a menu-driven C++ application.
-- Search vehicle records using Vehicle ID.
-- Improve logical thinking and object-oriented programming skills.
+* Understand the fundamentals of Object-Oriented Programming in C++.
+* Learn how to create base and derived classes.
+* Understand inheritance between banking account classes.
+* Practice virtual functions and function overriding.
+* Learn how pointers can reference derived class objects.
+* Understand dynamic memory allocation using `new` and `delete`.
+* Perform deposit and withdrawal operations.
+* Calculate interest for Savings and Fixed Deposit accounts.
+* Check overdraft limits for Checking accounts.
+* Develop a menu-driven console application.
+* Improve logical thinking and problem-solving skills.
 
 ---
 
 ## 🛠️ Technology Used
 
-- **C++ Language**
-- **Object-Oriented Programming (OOP)**
-- **Classes & Objects**
-- **Inheritance**
-- **Multiple Inheritance**
-- **Multilevel Inheritance**
-- **Constructors & Destructors**
-- **Encapsulation**
-- **Static Data Members**
-- **Arrays of Objects**
-- **Switch-Case**
-- **Loops**
-- **Visual Studio Code**
-- **Git & GitHub**
+* **C++ Language**
+* **Object-Oriented Programming (OOP)**
+* **Classes & Objects**
+* **Inheritance**
+* **Encapsulation**
+* **Virtual Functions**
+* **Function Overriding**
+* **Pointers**
+* **Dynamic Memory Allocation**
+* **Switch-Case**
+* **Do-While Loop**
+* **Visual Studio Code**
+* **Git & GitHub**
 
 ---
 
-# 📚 Project Modules
+# 📚 Problem Statements
 
-## Q1. Vehicle Base Class
+## Q1. Bank Account Base Class
 
 ### Problem Statement
 
-Develop a base **Vehicle class** that stores common information related to vehicles.
+Develop a base **BankAccount class** that stores common account information.
 
-The Vehicle class stores information such as:
+The class stores:
 
-- Vehicle ID
-- Vehicle Name
-- Manufacturer
-- Model
-- Manufacturing Year
+* Account Number
+* Account Holder Name
+* Account Balance
 
-The class uses private data members along with public setter and getter methods.
+It also provides functions to deposit money, withdraw money, display account information, and define a virtual function for interest calculation.
 
 ### Concept Used
 
-- Class and Object
-- Encapsulation
-- Private Data Members
-- Getter Methods
-- Setter Methods
-- Constructor
-- Destructor
-- Static Data Member
+* Class and Object
+* Encapsulation
+* Private Data Members
+* Constructor
+* Getter Methods
+* Deposit Function
+* Withdraw Function
+* Virtual Function
 
 ---
 
-## Q2. Car Class
+## Q2. Savings Account
 
 ### Problem Statement
 
-Develop a **Car class** by inheriting the properties of the Vehicle class.
+Develop a **SavingsAccount class** by inheriting the `BankAccount` class.
 
-In addition to the common vehicle information, the Car class stores the **Fuel Type** of the vehicle.
+The Savings Account stores an additional **Interest Rate** and calculates interest based on the current balance.
 
-The user can enter complete car information and display the stored car details.
-
-### Concept Used
-
-- Single Inheritance
-- Base Class
-- Derived Class
-- Getter and Setter Methods
-- Constructor
-- User Input
-- Data Display
-
----
-
-## Q3. Sedan Class
-
-### Problem Statement
-
-Develop a **Sedan class** by inheriting the Car class.
-
-The Sedan class allows the user to enter and display information about Sedan vehicles including Vehicle ID, name, manufacturer, model, year, and fuel type.
-
-### Concept Used
-
-- Multilevel Inheritance
-- Inherited Member Functions
-- Constructors
-- Getter and Setter Methods
-- Object-Oriented Programming
-
----
-
-## Q4. SUV Class
-
-### Problem Statement
-
-Develop an **SUV class** by inheriting the Car class.
-
-The program accepts complete information about an SUV and displays the stored details whenever required.
-
-### Concept Used
-
-- Multilevel Inheritance
-- Class Hierarchy
-- Getter and Setter Methods
-- Input and Display Functions
-- Code Reusability
-
----
-
-## Q5. Electric Car Class
-
-### Problem Statement
-
-Develop an **ElectricCar class** by inheriting the Car class.
-
-Along with the normal car information, the Electric Car class stores additional information about the vehicle's **Battery Capacity**.
-
-### Concept Used
-
-- Inheritance
-- Additional Data Members
-- Constructor
-- Getter and Setter Methods
-- Battery Capacity Management
-- Code Reusability
-
----
-
-## Q6. Sports Car Class
-
-### Problem Statement
-
-Develop a **SportsCar class** by inheriting the ElectricCar class.
-
-The Sports Car class stores an additional **Top Speed** value and provides functions to accept and display the top speed of the vehicle.
-
-### Concept Used
-
-- Multilevel Inheritance
-- Derived Class
-- Additional Properties
-- Getter and Setter Methods
-- Constructor Chaining
-
----
-
-## Q7. Aircraft Class
-
-### Problem Statement
-
-Develop an **Aircraft class** that stores information related to an aircraft.
-
-The class manages:
-
-- Aircraft ID
-- Flight Range
-
-The user can enter aircraft information and display the stored aircraft details.
-
-### Concept Used
-
-- Class and Object
-- Encapsulation
-- Constructor
-- Getter and Setter Methods
-- Input and Display Functions
-
----
-
-## Q8. Flying Car Class
-
-### Problem Statement
-
-Develop a **FlyingCar class** that inherits properties from both the **Car** and **Aircraft** classes.
-
-The Flying Car stores normal vehicle information along with its flight range.
-
-This demonstrates how a single class can inherit properties from more than one parent class.
-
-### Concept Used
-
-- Multiple Inheritance
-- Multiple Base Classes
-- Constructor Chaining
-- Car Properties
-- Aircraft Properties
-- Code Reusability
-
----
-
-## Q9. Vehicle Registry
-
-### Problem Statement
-
-Develop a **VehicleRegistry class** to manage all vehicle records in the system.
-
-The registry maintains separate collections for:
-
-- Cars
-- Electric Cars
-- Aircrafts
-- Flying Cars
-- Sports Cars
-- Sedans
-- SUVs
-
-The Vehicle Registry allows users to add vehicles, display all registered vehicles, and search for vehicles.
-
-### Concept Used
-
-- Arrays of Objects
-- Object Management
-- Multiple Classes
-- Counters
-- Functions
-- Loops
-- Switch-Case
-
----
-
-# ⚙️ Main Features
-
-## 1. Add Vehicle
-
-The system provides different vehicle categories while adding a new vehicle.
+### Formula Used
 
 ```text
-1. Car
-2. Electric Car
-3. Aircraft
-4. Flying Car
-5. Sports Car
-6. Sedan
-7. SUV
-
+Interest = Balance × (Interest Rate / 100)
 ```
 
-The user selects the required vehicle type and enters its corresponding information.
+### Concept Used
+
+* Single Inheritance
+* Derived Class
+* Constructor
+* Virtual Function
+* Function Overriding
+* Interest Calculation
 
 ---
 
-## 2. Display All Vehicles
+## Q3. Checking Account
 
-The system can display all registered vehicle records.
+### Problem Statement
 
-It checks each vehicle category and displays the information stored in the corresponding object array.
+Develop a **CheckingAccount class** by inheriting the `BankAccount` class.
 
----
+The Checking Account stores an **Overdraft Limit** and checks whether a requested withdrawal amount is within the available balance plus overdraft limit.
 
-## 3. Search Vehicle by ID
-
-The user can enter a **Vehicle ID** to search for a particular registered vehicle.
-
-The program checks the stored records of different vehicle categories.
-
-If the matching ID is found, the corresponding vehicle information is displayed.
-
-If no matching record exists, the program displays:
+### Condition Used
 
 ```text
-Vehicle not found.
+Withdrawal Amount <= Balance + Overdraft Limit
+```
 
+If the condition is true:
+
+```text
+Withdrawal allowed.
+```
+
+Otherwise:
+
+```text
+Overdraft limit exceeded.
+```
+
+### Concept Used
+
+* Single Inheritance
+* Derived Class
+* Constructor
+* Overdraft Limit
+* Conditional Statement
+* Balance Checking
+
+---
+
+## Q4. Fixed Deposit Account
+
+### Problem Statement
+
+Develop a **FixedDepositAccount class** by inheriting the `BankAccount` class.
+
+The Fixed Deposit Account stores the **Term in Months** and calculates interest using a fixed interest rate of **7%**.
+
+### Formula Used
+
+```text
+Interest = Balance × (7 / 100) × (Term / 12)
+```
+
+### Concept Used
+
+* Single Inheritance
+* Derived Class
+* Constructor
+* Virtual Function
+* Function Overriding
+* Fixed Interest Rate
+* Term-Based Interest Calculation
+
+---
+
+# ⚙️ Banking System Operations
+
+## 1. Create Savings Account
+
+The user enters:
+
+```text
+Account Number
+Account Holder Name
+Starting Balance
+Interest Rate
+```
+
+After successful creation:
+
+```text
+Savings Account Created.
 ```
 
 ---
 
-## 4. Exit
+## 2. Create Checking Account
 
-The user can select the Exit option to terminate the Vehicle Registry program.
+The user enters:
+
+```text
+Account Number
+Account Holder Name
+Starting Balance
+Overdraft Limit
+```
+
+After successful creation:
+
+```text
+Checking Account Created.
+```
+
+---
+
+## 3. Create Fixed Deposit Account
+
+The user enters:
+
+```text
+Account Number
+Account Holder Name
+Starting Balance
+Term in Months
+```
+
+After successful creation:
+
+```text
+Fixed Deposit Account Created.
+```
+
+---
+
+## 4. Deposit
+
+The user enters a deposit amount and the amount is added to the current account balance.
+
+### Concept Used
+
+* Member Function
+* Arithmetic Operation
+* Object Pointer
+
+---
+
+## 5. Withdraw
+
+The user enters a withdrawal amount.
+
+If sufficient balance is available, the amount is deducted from the account balance.
+
+```text
+Withdrawing....
+```
+
+If sufficient balance is not available:
+
+```text
+Not enough Balance...
+```
+
+### Concept Used
+
+* Conditional Statement
+* Member Function
+* Balance Validation
+
+---
+
+## 6. Display Account Information
+
+The system displays:
+
+```text
+Account Number
+Account Holder
+Balance
+```
+
+### Concept Used
+
+* Getter Methods
+* Member Function
+* Data Display
+
+---
+
+## 7. Calculate Interest
+
+The system calls the virtual `calculateInterest()` function through the `BankAccount` pointer.
+
+For a Savings Account, interest is calculated using the user-entered interest rate.
+
+For a Fixed Deposit Account, interest is calculated using the fixed **7% rate** and the selected term.
+
+### Concept Used
+
+* Virtual Function
+* Function Overriding
+* Runtime Polymorphism
+
+---
+
+## 8. Check Overdraft
+
+The overdraft feature is available for a **Checking Account**.
+
+The program checks whether the requested withdrawal amount is less than or equal to the account balance plus overdraft limit.
+
+### Concept Used
+
+* Checking Account
+* Conditional Statement
+* Overdraft Limit
+
+---
+
+## 9. Exit
+
+The user can select option `9` to terminate the program.
 
 ```text
 Exiting...
-
 ```
 
 ---
 
 # 🖥️ Main Menu
 
-The program provides the following menu:
-
 ```text
-1. Add Vehicle
-2. Display All Vehicles
-3. Search Vehicle by ID
-4. Exit
+===== BANKING SYSTEM =====
+1. Create Savings Account
+2. Create Checking Account
+3. Create Fixed Deposit Account
+4. Deposit
+5. Withdraw
+6. Display Account Info
+7. Calculate Interest
+8. Check Overdraft
+9. Exit
 
 Enter your choice:
-
 ```
-
-The menu continues to execute until the user selects option **4**.
 
 ---
 
 # 📸 Output Section
 
-## Output 1 — Main Menu
-
-```text
-1. Add Vehicle
-2. Display All Vehicles
-3. Search Vehicle by ID
-4. Exit
-
-Enter your choice:
-
-```
+## Output 1 — Savings Account
 
 ### Output Screenshot
 
-![Vehicle Registry Output](output/output1.png)
+![Savings Account Output](output/output1.png)
 
 ---
 
-## Output 2 — Add Vehicle
-
-```text
-1. Car
-2. Electric Car
-3. Aircraft
-4. Flying Car
-5. Sports Car
-6. Sedan
-7. SUV
-
-Enter Vehicle Type:
-
-```
+## Output 2 — Checking Account
 
 ### Output Screenshot
 
-![Vehicle Registry Output](output/output1.png)
+![Checking Account Output](output/output2.png)
 
 ---
 
-## Output 3 — Display Vehicle Details
-
-The system displays the information of vehicles that have been added to the registry.
-
-Example:
-
-```text
-VehicleID: 101
-Car Name: Swift
-Car Manufacturer: Maruti
-Car Model: VXI
-Car Year: 2025
-Car FuelType: Petrol
-
-```
+## Output 3 — Fixed Deposit Account
 
 ### Output Screenshot
 
-![Vehicle Registry Output](output/output1.png)
+![Fixed Deposit Account Output](output/output3.png)
 
 ---
 
-## Output 4 — Search Vehicle by ID
-
-```text
-Enter Vehicle ID to Search: 101
-
-VehicleID: 101
-Car Name: Swift
-Car Manufacturer: Maruti
-Car Model: VXI
-Car Year: 2025
-Car FuelType: Petrol
-
-```
-
-If the entered ID does not exist:
-
-```text
-Vehicle not found.
-
-```
+## Output 4 — Banking Operations
 
 ### Output Screenshot
 
-![Vehicle Registry Output](output/output1.png)
-
----
-
-## Output 5 — Electric Car Details
-
-```text
-VehicleID: 102
-Car Name: Mahindra BE 6
-Car Manufacturer: Mahindra
-Car Model: BE 6
-Car Year: 2025
-Car FuelType: Electric
-Battery Capacity: 79 kWh
-```
-
-### Output Screenshot
-
-![Electric Car Output](output/output1.png)
+![Banking Operations Output](output/output4.png)
 
 ---
 
 # 📂 Project Structure
 
 ```text
-Vehicle-Registry/
+banking-system/
 │
-├── vehicle-registry.cpp
+├── banking-system.cpp
 │
 ├── output/
-│   └── output1.png
+│   ├── output1.png
+│   ├── output2.png
+│   ├── output3.png
+│   └── output4.png
 │
 └── README.md
-
 ```
 
 ---
@@ -451,79 +397,81 @@ Vehicle-Registry/
 
 ## Encapsulation
 
-Private data members are used to protect vehicle information, while public getter and setter methods provide controlled access to the data.
+The `BankAccount` class stores Account Number, Account Holder Name, and Balance as private data members.
+
+Public member functions are used to access and modify account information.
 
 ---
 
 ## Inheritance
 
-Different vehicle classes inherit common properties from their parent classes.
-
-Example:
+The project uses inheritance to create different account types from the common `BankAccount` base class.
 
 ```text
-Vehicle
-   │
-   └── Car
-        │
-        ├── Sedan
-        ├── SUV
-        └── ElectricCar
-              │
-              └── SportsCar
-
+BankAccount
+    │
+    ├── SavingsAccount
+    │
+    ├── CheckingAccount
+    │
+    └── FixedDepositAccount
 ```
 
 ---
 
-## Multiple Inheritance
+## Virtual Function
 
-The `FlyingCar` class inherits from both:
+The `BankAccount` class contains:
 
-```text
-Car
-  \
-   → FlyingCar
-  /
-Aircraft
-
+```cpp
+virtual void calculateInterest()
+{
+}
 ```
 
-This allows FlyingCar to use both normal car properties and aircraft-related flight information.
+This function is overridden by Savings Account and Fixed Deposit Account.
 
 ---
 
-## Constructors
+## Function Overriding
 
-Constructors are used to initialize objects and vehicle information when objects are created.
+Both `SavingsAccount` and `FixedDepositAccount` provide their own implementation of `calculateInterest()`.
 
----
-
-## Destructors
-
-A destructor is implemented in the Vehicle class to update the total vehicle count when an object is destroyed.
+This allows different interest calculations for different account types.
 
 ---
 
-## Static Data Member
+## Runtime Polymorphism
 
-A static variable is used in the Vehicle class to maintain information related to the total number of Vehicle objects.
+A base class pointer is used:
+
+```cpp
+BankAccount *account = nullptr;
+```
+
+The pointer can reference Savings, Checking, or Fixed Deposit account objects.
+
+When `calculateInterest()` is called through this pointer, the appropriate overridden function is executed for supported derived account types.
 
 ---
 
-## Arrays of Objects
+## Dynamic Memory Allocation
 
-Arrays of different vehicle objects are maintained inside the VehicleRegistry class.
+Objects are dynamically created using the `new` keyword:
 
-This allows the system to store multiple:
+```cpp
+savings = new SavingsAccount(...);
+checking = new CheckingAccount(...);
+fixed = new FixedDepositAccount(...);
+```
 
-- Cars
-- Electric Cars
-- Aircrafts
-- Flying Cars
-- Sports Cars
-- Sedans
-- SUVs
+At the end of the program, allocated objects are released using:
+
+```cpp
+delete savings;
+delete checking;
+delete fixed;
+```
 
 ---
 
@@ -531,37 +479,40 @@ This allows the system to store multiple:
 
 After completing this project, I learned:
 
-- How classes and objects work in C++.
-- How to implement encapsulation using private data members.
-- How getter and setter methods are used.
-- How constructors initialize objects.
-- How destructors work when objects are destroyed.
-- How single inheritance works.
-- How multilevel inheritance works.
-- How multiple inheritance works.
-- How one class can reuse properties and functions of another class.
-- How arrays of objects can store multiple records.
-- How to create a menu-driven C++ program.
-- How to use `switch-case` for multiple operations.
-- How to search objects using their IDs.
-- How different OOP concepts can be combined into one project.
-- How to develop a structured real-world C++ application.
+* How classes and objects work in C++.
+* How to implement encapsulation using private data members.
+* How constructors initialize account objects.
+* How inheritance provides code reusability.
+* How derived classes extend a base class.
+* How virtual functions work.
+* How function overriding is implemented.
+* How runtime polymorphism works using a base class pointer.
+* How pointers can reference different account objects.
+* How dynamic memory allocation works using `new` and `delete`.
+* How deposit and withdrawal operations are implemented.
+* How Savings Account interest is calculated.
+* How Fixed Deposit interest is calculated.
+* How overdraft limits are checked.
+* How `switch-case` handles multiple menu options.
+* How a `do-while` loop keeps the menu running until Exit is selected.
 
 ---
 
 # 📋 Assignment Information
 
-**Project:** Vehicle Registry
+**Project:** Banking System
 
-**Topic:** Object-Oriented Programming & Inheritance
+**Topic:** Object-Oriented Programming, Inheritance & Polymorphism
 
 **Language:** C++
 
 **Application Type:** Console Application
 
+**Total Account Types:** 3
+
 **Platform:** Visual Studio Code
 
-**Main Concepts:** Classes, Objects, Inheritance, Encapsulation & Arrays of Objects
+**Main Concepts:** Classes, Objects, Encapsulation, Inheritance, Virtual Functions, Polymorphism & Pointers
 
 ---
 
@@ -571,7 +522,7 @@ After completing this project, I learned:
 
 GitHub Repository:
 
-**Vehicle Registry — C++ OOP Vehicle Management System**
+**Banking System — C++ OOP Banking Management Project**
 
 ---
 
@@ -579,11 +530,11 @@ GitHub Repository:
 
 This project helped in understanding the fundamentals and practical implementation of **Object-Oriented Programming in C++**.
 
-Different classes such as Vehicle, Car, Electric Car, Sports Car, Sedan, SUV, Aircraft, and Flying Car were created to demonstrate different forms of inheritance and code reusability.
+The `BankAccount` class provides common banking functionality, while `SavingsAccount`, `CheckingAccount`, and `FixedDepositAccount` provide specialized features such as interest calculation and overdraft checking.
 
-The Vehicle Registry class combines these concepts into a menu-driven system where users can **add vehicles, display registered vehicles, and search vehicles using their IDs**.
+The project demonstrates how **inheritance, encapsulation, virtual functions, function overriding, runtime polymorphism, pointers, dynamic memory allocation, switch-case, and loops** can be combined to create a menu-driven banking application.
 
-The main purpose of this project is to improve understanding of **C++ OOP concepts, inheritance, encapsulation, constructors, arrays of objects, and logical programming**.
+The main purpose of this project is to strengthen **C++ programming fundamentals and Object-Oriented Programming concepts**.
 
 ---
 
@@ -591,4 +542,4 @@ The main purpose of this project is to improve understanding of **C++ OOP concep
 
 **Completed ✅**
 
-The **Vehicle Registry Management System** has been implemented using **C++ Object-Oriented Programming concepts**.
+The **Banking System** has been successfully implemented using **C++ Object-Oriented Programming concepts**.
